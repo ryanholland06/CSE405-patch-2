@@ -1,0 +1,75 @@
+
+Software Requirements Specification
+for
+CSE  405 Message App
+Version 1.0 approved
+Prepared by Ryan Holland
+4/22/2019
+ 
+Table of Contents
+Table of Contents	ii
+Revision History	ii
+1.	Introduction	1
+1.1	Purpose	1
+1.2	Document Conventions	1
+1.3	Intended Audience and Reading Suggestions	1
+1.4	Product Scope	1
+1.5	References	1
+2.	Overall Description	1
+2.1	Product Perspective	1
+2.2	Product Functions	2
+2.4	Operating Environment	2
+3.	External Interface Requirements	2
+3.1	User Interfaces	2
+3.2	Hardware Interfaces	2
+3.3	Software Interfaces	2
+3.4	Communications Interfaces	2
+4.	System Features	3
+4.1	System Feature 1	3
+4.2	System Feature 2 (and so on)	3
+
+
+
+Revision History
+Name	Date	Reason For Changes	Version
+Ryan Holland	4/16/19	Signal R and project set up along with basic authentication scaffolding 	
+			
+
+
+ 
+1.	Introduction
+1.1	Purpose 
+This is a web application that uses ASP .Net Core that is used to send messages and also to authenticate users 
+1.2	Document Conventions
+For this application all documentation will be done at the individual level of each component of the web application 
+1.3	Intended Audience and Reading Suggestions
+This document is intended for developers to test and see the possibilities of using Asp .Net Core. Suggested to start reading documentation from the product scope to understand the purpose of this application.
+1.4	Product Scope
+The propose of this web app is to study and learn more about Asp Core .Net by creating a web application with a messaging service. The messaging will be created using Singlar R and also there will be an authentication system for users to create accounts with a password and username.
+1.5	References
+https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/introduction-to-signalr
+The url above includes detailed information about Signal R which is used for the passing of messages 
+2.	Overall Description
+2.1	Product Perspective
+This is a new product used for simple messaging along to see the communication between a server and client. In this case we will see it on a local host along with the authentication  process that creates a local database for user login.
+2.2	Product Functions
+This product must allow the user to first create a user name with a password that will create there own personal account. The user can then login and will gain access to be able to send messages in plain text through the web application.
+2.3	Operating Environment
+This projected will be created on a local environment using Windows 10 as its operating system. This system will only be used with the local host for server side communication. 
+3.	External Interface Requirements
+3.1	User Interfaces
+The user interface will be created using Razor pages that include a combination of c# code and cshtml in order create a graphical user interface. The user interface will be very simple that will include text boxes for messaging and clickable button to navigate the web application.
+3.2	Software Interfaces
+This web application uses Asp .Net core version 2.1 along with Signal R 1.0.03
+3.3	Communications Interfaces
+This web application will not cover any major security features such as HTTPS since it is ran locally it will only communicated using HTTP.
+
+4.	System Features
+4.1	System Feature 1
+4.1.1	Hello World
+	Create a Asp .Net core project that also includes Signal R along with a hub for messaging for users.
+4.1.2	Messaging 
+               Include a way for users to send messages using the local host that can be seen when opening multiple browsers 
+4.1.3	User Authentication 
+Include an authentication that allows users to sign in along with blocking non users from sending message and allowing users with an account to send them.
+

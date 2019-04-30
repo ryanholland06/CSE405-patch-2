@@ -1,0 +1,37 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Coyote Chat Den";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@Model.Message</h3>
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
+<div class="container">
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            Username:<output type="text" id="userInput"> @UserManager.GetUserName(User)  </output>
+            <br />
+            Message:<input type="text" id="messageInput" />
+            <input type="button" id="sendButton" value="Send Message" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">&nbsp;</div>
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
